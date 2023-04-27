@@ -2,7 +2,7 @@
 
 odd_even_num <- function(a){
     if(!is.numeric(a)){
-        result <- 'a is a number'
+        result <- "a is a number"
         }else if(a %% 2 == 0){
             result <- "a is even number"
         }else if(a %% 2 == 1){
