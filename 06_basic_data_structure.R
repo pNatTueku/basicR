@@ -20,7 +20,7 @@ class(L)
 class(A)
 class(B)
 
-# Matrix - two dimension container which ccontains same data type using matrix() to construct
+# Matrix - two dimension container which contains same data type using matrix() to construct
 a <- 1:8
 m <- 1:8
 n <- c(1, 2, 3, 4, 5, 6, 7, 8)
@@ -40,3 +40,29 @@ print(M2)
 print(M3)
 print(M4)
 print(M5)
+
+# Data frame (df) - two dimension container that every member in each column must be the same data type, each row can contain different type of data using data.frame() to contruct a df
+# Imagine multiple vectors with identical lengths with each member at the same position bound together as a ROW
+
+df <- data.frame(name = c("Mark", "Jackson", "JB"), weight = c(65, 63, 72), height = c(175, 176, 179))
+print(df)
+df$height # call height column
+class(df)
+class(df$height)
+
+# List - multi-dimensional container, each member in the list can be any type of data - data container can be add to list
+# No restrict of length foeeach member
+# Used as a container of results of analysis (e.g. regression results)
+
+a = c(TRUE, FALSE, TRUE)
+b = 1:5
+c = c("L", "O", "V", "E")
+
+list_A <- list(a, b, c) # combine vectors to list
+print(list_A)
+
+list_B <- list(col1 = a, col2 = b, col3 = c)
+print(list_B)
+
+list_C <- list(list_A, df)
+print(list_C)
