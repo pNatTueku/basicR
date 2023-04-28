@@ -80,3 +80,19 @@ str(list_1)
 list_1[1]
 list_1[2]
 list_1$mm$mpg
+
+# Weight versus age of chicks on different diets
+ChickWeight[1,]
+dim(ChickWeight)
+nrow(ChickWeight)
+ncol(ChickWeight)
+
+class(ChickWeight)
+typeof(ChickWeight)
+summary(ChickWeight)
+str(ChickWeight)
+
+model1 <- lm(weight ~ Time, data = ChickWeight) # fitting model
+sum1 <- summary(model1)
+
+print(sum1)
